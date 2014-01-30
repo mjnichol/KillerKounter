@@ -10,7 +10,11 @@ public class Counter {
 	private ArrayList<Date> dates;
 	
 	// add an exception to catch null names and repeated names
-	public Counter(String name) {
+	public Counter(String name) throws IllegalArgumentException {
+		
+		// make sure the counter's name isn't empty!
+		if (name == null)
+			throw new IllegalArgumentException();
 		this.count = 0;
 		this.name = name;
 		dates = new ArrayList<Date>();
@@ -23,7 +27,10 @@ public class Counter {
 	}
 	
 	// add an exception if the string is Null
-	public void Rename(String name){
+	public void Rename(String name) throws IllegalArgumentException{
+		// make sure the counter's name isn't empty!
+		if (name == null)
+			throw new IllegalArgumentException();
 		this.name = name;
 	}
 	
@@ -47,5 +54,12 @@ public class Counter {
 	public ArrayList<Date> getDates() {
 		return dates;
 	}
+	
+	// You will want to print the count and name here. This code is interpreted by the listview in the counter activity
+	@Override
+	public String toString(){
+		return count.toString() + "\n" + name; 
+	}
+	
 
 }

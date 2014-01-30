@@ -1,9 +1,14 @@
 package com.killerkounter;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 
+/* 
+ * This activity will make the main splash page that
+ * will be used for navigating between the options we have available
+*/
 public class MainActivity extends Activity {
 
 	@Override
@@ -18,5 +23,25 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
+	
+	
+	/* Called when the user wants to go to the counter page */
+	public void seeCounters(View view){
+		// perform the logic to transfer to the counter activity
+		// make a toast to check that this button press works
+	}
+	
+	public void seeStats(View view){
+		// perform the logic to transfer to the counter activity
+		// make a toast to check that this button press works
+	}
+	
+	// Will their be a create counters activity? Unlikely, do it inline
+	/*
+	public void createCounters(View view){
+		
+	}
+	*/
+	
+	
 }
