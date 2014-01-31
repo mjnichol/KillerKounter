@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -24,8 +25,22 @@ public class DisplayCountersActivity extends ListActivity {
 	private ArrayAdapter<Counter> mAdapter;
 	private CounterList my_counters;
 	
+	// button switches
+	private boolean rename = false;
+	private boolean reset = false;
+	
 	Intent returnIntent = new Intent();
-		
+	
+	// turn the reset button on and off
+	public void toggleReset(View view){
+		this.reset = !this.reset;
+	}
+	
+	// turn the rename button on and off
+	public void toggleRename(View view){
+		this.rename = !this.rename;
+	}
+	
 	// intercept the back button signal and store counter state
 	@Override
 	public void onBackPressed() {
@@ -189,24 +204,25 @@ public class DisplayCountersActivity extends ListActivity {
     	//instance.Increment();
     	//mAdapter.notifyDataSetChanged();
     	
-    	my_counters.getCounterList().get(position).Increment();
-    	/*
-    	Toast.makeText(this,
-                "Clicked " + getListAdapter().getItem(position).toString(),
-                Toast.LENGTH_SHORT).show();
-                */
+    	if(reset){
+    		my_counters.getCounterList().get(position).Reset();
+    	}
+    	
+    	else if(rename){
+    		EditText editText = (EditText) findViewById(R.id.edit_name);
+    		String name = editText.getText().toString();
+    		my_counters.getCounterList().get(position).Rename(name);
+    		Toast.makeText(this,
+    				name,
+    				Toast.LENGTH_SHORT).show();
+    	}
+    	
+    	else{
+    		my_counters.getCounterList().get(position).Increment();
+    	}
+
     	mAdapter.notifyDataSetChanged();
     	onContentChanged(); // this causes the place in the list to go to the top
  
     }
-    
-    // override the on destroy method to save the state of the counter objects and pass
-    // it back to the main activity using intents
-    /*
-    @Override
-    protected void onDestroy (){
-    	
-    }
-    */
-
 }

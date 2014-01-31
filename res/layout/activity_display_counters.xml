@@ -85,6 +85,28 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp" />
+        
+        <Button android:id="@+id/toggle_reset"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/toggle_reset"
+        	android:layout_gravity="center" 
+        	android:gravity="center"
+    		android:onClick="toggleReset" />
+        
+		<Button android:id="@+id/toggle_rename"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/toggle_rename"
+        	android:layout_gravity="center" 
+        	android:gravity="center"
+    		android:onClick="toggleRename" />
+		
+		<EditText android:id="@+id/edit_name"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:hint="@string/edit_message"/>
+        
     </LinearLayout>
     
 </LinearLayout>

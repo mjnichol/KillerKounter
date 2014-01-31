@@ -15,7 +15,8 @@
     
     <string name="create_counter">Create the Counter!</string>
     
-    
+    <string name="toggle_reset">Click on Counters to Reset</string>
+    <string name="toggle_rename">Click on Counters to Enter New Name</string>
     <string name="heading_dismissable_list_view">Counters</string>
 
 </resources>
