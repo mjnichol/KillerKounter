@@ -17,6 +17,11 @@ public class DisplayTimeActivity extends ListActivity {
 		setContentView(R.layout.activity_display_time);
 		// Show the Up button in the action bar.
 		setupActionBar();
+		
+		
+		
+		
+		
 	}
 
 	/**
