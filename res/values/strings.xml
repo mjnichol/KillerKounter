@@ -4,15 +4,13 @@
     <string name="app_name">Killer Kounter</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Killer Counter!!!</string>
-
     <string name="view_counters">View the Counters</string>
     <string name="view_stats">Check Statistics</string>
-    
     <string name="edit_message">Enter Counter Name</string>
     <string name="make_counter">Create Counter</string>
-    
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_manipulate_counters">Counters!</string>
     <string name="title_activity_view_statistics">Counter Statistics</string>
-    
+    <string name="title_activity_display_counters">DisplayCounters</string>
+
 </resources>
