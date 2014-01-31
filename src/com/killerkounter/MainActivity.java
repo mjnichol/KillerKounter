@@ -16,8 +16,6 @@ import com.google.gson.Gson;
 */
 public class MainActivity extends Activity {
 	
-	
-	
 	// key for passing counter list
 	public final static String COUNTER_LIST = "com.killercounter.COUNTER_LIST";
 	
@@ -46,9 +44,6 @@ public class MainActivity extends Activity {
 		// transfer to the counter activity
 		Intent intent = new Intent(this, DisplayCountersActivity.class);
 		
-		// make a new Gson object
-		Gson serializer = new Gson();
-		
 		// String to hold the JSON string
 		String JSON_CounterList = new Gson().toJson(counters);
 		
@@ -66,15 +61,10 @@ public class MainActivity extends Activity {
 		 Toast.makeText(this,
 	                "Clicked see stats",
 	                Toast.LENGTH_SHORT).show();
-	    }
 	}
+}
 	
-	// Will their be a create counters activity? Unlikely, do it inline
-	/*
-	public void createCounters(View view){
-		
-	}
-	*/
+
 	
 	
 

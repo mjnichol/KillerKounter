@@ -19,6 +19,7 @@ public class DisplayCountersActivity extends ListActivity {
 	
 	// array adapter to notice changes to the counter list
 	private ArrayAdapter<Counter> mAdapter;
+	private CounterList my_counters;
 	
 	@SuppressLint("NewApi")
 	@Override
@@ -33,6 +34,7 @@ public class DisplayCountersActivity extends ListActivity {
 		Gson gson = new Gson();
 		// extract the JSON
 		CounterList counters = gson.fromJson(CounterListJSON, CounterList.class);
+		this.my_counters = counters;
 		
 		//you will have to use the swipe to unlock XML stuff to make this work as desired
 		setContentView(R.layout.activity_display_counters);
@@ -129,9 +131,20 @@ public class DisplayCountersActivity extends ListActivity {
 	
     @Override
     protected void onListItemClick(ListView listView, View view, int position, long id) {
-        Toast.makeText(this,
+        
+    	//Counter instance = (Counter) getListAdapter().getItem(position);
+    	//instance.Increment();
+    	//mAdapter.notifyDataSetChanged();
+    	
+    	my_counters.getCounterList().get(position).Increment();
+    	Toast.makeText(this,
                 "Clicked " + getListAdapter().getItem(position).toString(),
                 Toast.LENGTH_SHORT).show();
+    	this.refresh();
+    	onContentChanged();
     }
-	
+    
+	private void refresh(){
+		mAdapter.notifyDataSetChanged();
+	}
 }
