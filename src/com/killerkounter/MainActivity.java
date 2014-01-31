@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Context;
@@ -34,7 +35,12 @@ public class MainActivity extends Activity {
 	// see lonely twitter for help!
 	public CounterList counters = new CounterList();
 
-
+	@Override
+	protected void onStart() {
+		// TODO Auto-generated method stub
+		super.onStart();
+		this.loadFromFile();
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +62,6 @@ public class MainActivity extends Activity {
 			FileInputStream fis = openFileInput(FILENAME);
 			BufferedReader in = new BufferedReader(new InputStreamReader(fis));
 			String line = in.readLine();
-
 			Gson gson = new Gson();
 			while (line != null) {
 				counters = gson.fromJson(line, CounterList.class);
@@ -77,7 +82,7 @@ public class MainActivity extends Activity {
 		try {
 			//countersArray.add(counter);
 			Gson gson = new Gson();
-			String json = gson.toJson(counters.getCounterList());
+			String json = gson.toJson(counters); //should this be the getCounterList()?
 			FileOutputStream fos = openFileOutput(FILENAME,
 					Context.MODE_APPEND);
 			fos.write(json.getBytes());
