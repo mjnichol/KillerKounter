@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -14,6 +15,8 @@ import com.google.gson.Gson;
  * will be used for navigating between the options we have available
 */
 public class MainActivity extends Activity {
+	
+	
 	
 	// key for passing counter list
 	public final static String COUNTER_LIST = "com.killercounter.COUNTER_LIST";
@@ -47,7 +50,7 @@ public class MainActivity extends Activity {
 		Gson serializer = new Gson();
 		
 		// String to hold the JSON string
-		String JSON_CounterList = new String();//new Gson().toJson(counters);
+		String JSON_CounterList = new Gson().toJson(counters);
 		
 		// send the JSON string
 		intent.putExtra(COUNTER_LIST, JSON_CounterList);
