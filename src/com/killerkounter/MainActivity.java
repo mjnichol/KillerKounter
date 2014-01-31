@@ -110,16 +110,21 @@ public class MainActivity extends Activity {
 		intent.putExtra(COUNTER_LIST, JSON_CounterList);
 
 		// start the desired activity
-		//startActivity(intent);
 		startActivityForResult(intent, RESULT_CODE);
 	}
-
+	
+	// transfer to the statistics activity
 	public void seeStats(View view){
-		// perform the logic to transfer to the counter activity
-		// make a toast to check that this button press works
-		Toast.makeText(this,
-				"Clicked see stats",
-				Toast.LENGTH_SHORT).show();
+
+		// transfer to the counter activity
+		Intent intent = new Intent(this, DisplayStatisticsActivity.class);
+
+		// String to hold the JSON string
+		String JSON_CounterList = new Gson().toJson(counters);
+
+		// send the JSON string
+		intent.putExtra(COUNTER_LIST, JSON_CounterList);
+		startActivity(intent);
 	}
 
 	/* Called when the user clicks the send button */

@@ -12,11 +12,11 @@
     <string name="title_activity_manipulate_counters">Counters!</string>
     <string name="title_activity_view_statistics">Counter Statistics</string>
     <string name="title_activity_display_counters">DisplayCounters</string>
-    
     <string name="create_counter">Create the Counter!</string>
-    
     <string name="toggle_reset">Click on Counters to Reset</string>
     <string name="toggle_rename">Click on Counters to Enter New Name</string>
     <string name="heading_dismissable_list_view">Counters</string>
+    <string name="title_activity_display_statistics">DisplayStatisticsActivity</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

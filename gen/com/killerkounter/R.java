@@ -35,11 +35,13 @@ public final class R {
     }
     public static final class layout {
         public static final int activity_display_counters=0x7f030000;
-        public static final int activity_main=0x7f030001;
+        public static final int activity_display_statistics=0x7f030001;
+        public static final int activity_main=0x7f030002;
     }
     public static final class menu {
         public static final int display_counters=0x7f070000;
-        public static final int main=0x7f070001;
+        public static final int display_statistics=0x7f070001;
+        public static final int main=0x7f070002;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -48,8 +50,10 @@ public final class R {
         public static final int create_counter=0x7f05000b;
         public static final int edit_message=0x7f050005;
         public static final int heading_dismissable_list_view=0x7f05000e;
+        public static final int hello_world=0x7f050010;
         public static final int make_counter=0x7f050006;
         public static final int title_activity_display_counters=0x7f05000a;
+        public static final int title_activity_display_statistics=0x7f05000f;
         public static final int title_activity_main=0x7f050007;
         public static final int title_activity_manipulate_counters=0x7f050008;
         public static final int title_activity_view_statistics=0x7f050009;
