@@ -43,6 +43,9 @@ public class MainActivity extends Activity {
 		// transfer to the counter activity
 		Intent intent = new Intent(this, DisplayCountersActivity.class);
 		
+		// make a new Gson object
+		Gson serializer = new Gson();
+		
 		// String to hold the JSON string
 		String JSON_CounterList = new String();//new Gson().toJson(counters);
 		

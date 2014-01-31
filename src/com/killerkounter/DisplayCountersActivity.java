@@ -9,6 +9,8 @@ import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.gson.Gson;
+
 public class DisplayCountersActivity extends Activity {
 
 	@SuppressLint("NewApi")
@@ -20,7 +22,10 @@ public class DisplayCountersActivity extends Activity {
 		Intent intent = getIntent();
 		String CounterListJSON = intent.getStringExtra(MainActivity.COUNTER_LIST);
 		
+		// Gson element
+		Gson gson = new Gson();
 		// extract the JSON
+		CounterList counters = gson.fromJson(CounterListJSON, CounterList.class);
 		
 		//you will have to use the swipe to unlock XML stuff to make this work as desired
 		setContentView(R.layout.activity_display_counters);
