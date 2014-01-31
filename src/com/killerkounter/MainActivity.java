@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Toast;
-
 import com.google.gson.Gson;
 
 /* 
@@ -61,6 +61,16 @@ public class MainActivity extends Activity {
 		 Toast.makeText(this,
 	                "Clicked see stats",
 	                Toast.LENGTH_SHORT).show();
+	}
+	
+	/* Called when the user clicks the send button */
+	public void createCounter(View view){
+		Toast.makeText(this,
+                "Clicked create counter",
+                Toast.LENGTH_SHORT).show();
+		EditText editText = (EditText) findViewById(R.id.edit_message);
+		//String name = editText.getText().toString();
+		//counters.addCounter(new Counter(name));
 	}
 }
 	

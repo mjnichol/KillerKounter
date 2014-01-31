@@ -17,6 +17,8 @@ import com.google.gson.Gson;
 
 public class DisplayCountersActivity extends ListActivity {
 	
+	public final static String NEW_COUNTER_LIST = "com.killercounter.NEW_COUNTER_LIST";
+	
 	// array adapter to notice changes to the counter list
 	private ArrayAdapter<Counter> mAdapter;
 	private CounterList my_counters;
@@ -42,9 +44,11 @@ public class DisplayCountersActivity extends ListActivity {
 		// Show the Up button in the action bar.
 		setupActionBar();
 		
-		for (int i = 0 ; i < 7 ; i++){
+		/*
+		for (int i = 0 ; i < 20 ; i++){
 			counters.addCounter(new Counter("counter " + i));
 		}
+		*/
 		
         // Set up ListView example
 		/*
@@ -140,11 +144,17 @@ public class DisplayCountersActivity extends ListActivity {
     	Toast.makeText(this,
                 "Clicked " + getListAdapter().getItem(position).toString(),
                 Toast.LENGTH_SHORT).show();
-    	this.refresh();
-    	onContentChanged();
+    	mAdapter.notifyDataSetChanged();
+    	onContentChanged(); // this causes the place in the list to go to the top
     }
     
-	private void refresh(){
-		mAdapter.notifyDataSetChanged();
-	}
+    // override the on destroy method to save the state of the counter objects and pass
+    // it back to the main activity using intents
+    /*
+    @Override
+    protected void onDestroy (){
+    	
+    }
+    */
+
 }
