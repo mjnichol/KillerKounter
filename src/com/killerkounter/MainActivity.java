@@ -7,6 +7,8 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 /* 
  * This activity will make the main splash page that
  * will be used for navigating between the options we have available
@@ -42,7 +44,7 @@ public class MainActivity extends Activity {
 		Intent intent = new Intent(this, DisplayCountersActivity.class);
 		
 		// String to hold the JSON string
-		String JSON_CounterList = new String();
+		String JSON_CounterList = new String();//new Gson().toJson(counters);
 		
 		// send the JSON string
 		intent.putExtra(COUNTER_LIST, JSON_CounterList);
