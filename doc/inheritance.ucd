@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="killerkounter" size="1313,1094" id="com.killerkounter" metadata="uml2-1.0" initialized="true" tag="1000" key="32303037303533312D31303030204B696C6C65724B6F756E7465722F6D6A6E6963686F6C">
+  <children xsi:type="editmodel:ClassEditModel" name="Statistics" location="731,454" size="130,157" id="com.killerkounter/Statistics" runTimeClassModel="Statistics(Lcom.killerkounter.Counter;),MinutelyCounts(),HourlyCounts(),MonthlyCounts(),WeeklyCounts(),DailyCounts()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="107,108">
+      <children xsi:type="editmodel:MethodEditModel" name="DailyCounts" id="com.killerkounter/Statistics#DailyCounts()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="HourlyCounts" id="com.killerkounter/Statistics#HourlyCounts()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="MinutelyCounts" id="com.killerkounter/Statistics#MinutelyCounts()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="MonthlyCounts" id="com.killerkounter/Statistics#MonthlyCounts()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Statistics" id="com.killerkounter/Statistics#Statistics(Lcom.killerkounter.Counter;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="WeeklyCounts" id="com.killerkounter/Statistics#WeeklyCounts()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DisplayTimeActivity" location="911,454" size="177,85" id="com.killerkounter/DisplayTimeActivity" runTimeClassModel="onCreateOptionsMenu(Landroid.view.Menu;),onOptionsItemSelected(Landroid.view.MenuItem;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="146,36">
+      <children xsi:type="editmodel:MethodEditModel" name="onCreateOptionsMenu" id="com.killerkounter/DisplayTimeActivity#onCreateOptionsMenu(Landroid.view.Menu;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onOptionsItemSelected" id="com.killerkounter/DisplayTimeActivity#onOptionsItemSelected(Landroid.view.MenuItem;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DisplayCountersActivity" location="667,50" size="206,193" id="com.killerkounter/DisplayCountersActivity" runTimeClassModel="toggleRename(Landroid.view.View;),onCreateOptionsMenu(Landroid.view.Menu;),onBackPressed(),onKeyDown(ILandroid.view.KeyEvent;),nEW_COUNTER_LIST,onOptionsItemSelected(Landroid.view.MenuItem;),toggleReset(Landroid.view.View;),returnIntent">
+    <children xsi:type="editmodel:CompartmentEditModel" size="155,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="nEW_COUNTER_LIST" id="com.killerkounter/DisplayCountersActivity#nEW_COUNTER_LIST"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="returnIntent" id="com.killerkounter/DisplayCountersActivity#returnIntent"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="146,108">
+      <children xsi:type="editmodel:MethodEditModel" name="onBackPressed" id="com.killerkounter/DisplayCountersActivity#onBackPressed()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onCreateOptionsMenu" id="com.killerkounter/DisplayCountersActivity#onCreateOptionsMenu(Landroid.view.Menu;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onKeyDown" id="com.killerkounter/DisplayCountersActivity#onKeyDown(ILandroid.view.KeyEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onOptionsItemSelected" id="com.killerkounter/DisplayCountersActivity#onOptionsItemSelected(Landroid.view.MenuItem;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toggleRename" id="com.killerkounter/DisplayCountersActivity#toggleRename(Landroid.view.View;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toggleReset" id="com.killerkounter/DisplayCountersActivity#toggleReset(Landroid.view.View;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="CounterList" location="923,50" size="204,157" id="com.killerkounter/CounterList" runTimeClassModel="CounterList(),destroyCounter(Lcom.killerkounter.Counter;),numCounters,counterList,CounterList(Ljava.util.ArrayList;),addCounter(Lcom.killerkounter.Counter;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="181,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="counterList" id="com.killerkounter/CounterList#counterList"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="numCounters" id="com.killerkounter/CounterList#numCounters"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="106,72">
+      <children xsi:type="editmodel:MethodEditModel" name="CounterList" id="com.killerkounter/CounterList#CounterList(Ljava.util.ArrayList;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="CounterList" id="com.killerkounter/CounterList#CounterList()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addCounter" id="com.killerkounter/CounterList#addCounter(Lcom.killerkounter.Counter;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="destroyCounter" id="com.killerkounter/CounterList#destroyCounter(Lcom.killerkounter.Counter;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SwipeDismissTouchListener" location="387,50" size="230,195" id="com.killerkounter/SwipeDismissTouchListener" runTimeClassModel="com.killerkounter.SwipeDismissTouchListener.DismissCallbacks,onTouch(Landroid.view.View;Landroid.view.MotionEvent;),SwipeDismissTouchListener(Landroid.view.View;Ljava.lang.Object;Lcom.killerkounter.SwipeDismissTouchListener.DismissCallbacks;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="166,36">
+      <children xsi:type="editmodel:MethodEditModel" name="SwipeDismissTouchListener" id="com.killerkounter/SwipeDismissTouchListener#SwipeDismissTouchListener(Landroid.view.View;Ljava.lang.Object;Lcom.killerkounter.SwipeDismissTouchListener.DismissCallbacks;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onTouch" id="com.killerkounter/SwipeDismissTouchListener#onTouch(Landroid.view.View;Landroid.view.MotionEvent;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="158,100">
+      <children xsi:type="editmodel:InterfaceEditModel" name="DismissCallbacks" size="158,98" id="com.killerkounter/SwipeDismissTouchListener$DismissCallbacks" runTimeClassModel="onDismiss(Landroid.view.View;Ljava.lang.Object;),canDismiss(Ljava.lang.Object;)">
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="87,36">
+          <children xsi:type="editmodel:MethodEditModel" name="canDismiss" id="com.killerkounter/SwipeDismissTouchListener$DismissCallbacks#canDismiss(Ljava.lang.Object;)"/>
+          <children xsi:type="editmodel:MethodEditModel" name="onDismiss" id="com.killerkounter/SwipeDismissTouchListener$DismissCallbacks#onDismiss(Landroid.view.View;Ljava.lang.Object;)"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+      </children>
+    </children>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="SwipeDismissListViewTouchListener" location="50,50" size="287,354" id="com.killerkounter/SwipeDismissListViewTouchListener" runTimeClassModel="onTouch(Landroid.view.View;Landroid.view.MotionEvent;),setEnabled(Z),com.killerkounter.SwipeDismissListViewTouchListener.PendingDismissData,SwipeDismissListViewTouchListener(Landroid.widget.ListView;Lcom.killerkounter.SwipeDismissListViewTouchListener.DismissCallbacks;),com.killerkounter.SwipeDismissListViewTouchListener.DismissCallbacks,makeScrollListener()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="208,72">
+      <children xsi:type="editmodel:MethodEditModel" name="SwipeDismissListViewTouchListener" id="com.killerkounter/SwipeDismissListViewTouchListener#SwipeDismissListViewTouchListener(Landroid.widget.ListView;Lcom.killerkounter.SwipeDismissListViewTouchListener.DismissCallbacks;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="makeScrollListener" id="com.killerkounter/SwipeDismissListViewTouchListener#makeScrollListener()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onTouch" id="com.killerkounter/SwipeDismissListViewTouchListener#onTouch(Landroid.view.View;Landroid.view.MotionEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setEnabled" id="com.killerkounter/SwipeDismissListViewTouchListener#setEnabled(Z)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="183,223">
+      <children xsi:type="editmodel:InterfaceEditModel" name="DismissCallbacks" size="158,98" id="com.killerkounter/SwipeDismissListViewTouchListener$DismissCallbacks" runTimeClassModel="onDismiss(Landroid.widget.ListView;[I),canDismiss(I)">
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="87,36">
+          <children xsi:type="editmodel:MethodEditModel" name="canDismiss" id="com.killerkounter/SwipeDismissListViewTouchListener$DismissCallbacks#canDismiss(I)"/>
+          <children xsi:type="editmodel:MethodEditModel" name="onDismiss" id="com.killerkounter/SwipeDismissListViewTouchListener$DismissCallbacks#onDismiss(Landroid.widget.ListView;[I)"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+      </children>
+      <children xsi:type="editmodel:ClassEditModel" name="PendingDismissData" size="183,121" id="com.killerkounter/SwipeDismissListViewTouchListener$PendingDismissData" runTimeClassModel="position,PendingDismissData(ILandroid.view.View;),compareTo(Lcom.killerkounter.SwipeDismissListViewTouchListener.PendingDismissData;),view">
+        <children xsi:type="editmodel:CompartmentEditModel" size="77,36">
+          <children xsi:type="editmodel:AttributeEditModel" name="position" id="com.killerkounter/SwipeDismissListViewTouchListener$PendingDismissData#position"/>
+          <children xsi:type="editmodel:AttributeEditModel" name="view" id="com.killerkounter/SwipeDismissListViewTouchListener$PendingDismissData#view"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel" size="132,36">
+          <children xsi:type="editmodel:MethodEditModel" name="PendingDismissData" id="com.killerkounter/SwipeDismissListViewTouchListener$PendingDismissData#PendingDismissData(ILandroid.view.View;)"/>
+          <children xsi:type="editmodel:MethodEditModel" name="compareTo" id="com.killerkounter/SwipeDismissListViewTouchListener$PendingDismissData#compareTo(Lcom.killerkounter.SwipeDismissListViewTouchListener.PendingDismissData;)"/>
+        </children>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+      </children>
+    </children>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="MainActivity" location="518,454" size="163,139" id="com.killerkounter/MainActivity" runTimeClassModel="onCreateOptionsMenu(Landroid.view.Menu;),seeStats(Landroid.view.View;),cOUNTER_LIST,seeCounters(Landroid.view.View;),createCounter(Landroid.view.View;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="127,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="cOUNTER_LIST" id="com.killerkounter/MainActivity#cOUNTER_LIST"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="140,72">
+      <children xsi:type="editmodel:MethodEditModel" name="createCounter" id="com.killerkounter/MainActivity#createCounter(Landroid.view.View;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onCreateOptionsMenu" id="com.killerkounter/MainActivity#onCreateOptionsMenu(Landroid.view.Menu;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="seeCounters" id="com.killerkounter/MainActivity#seeCounters(Landroid.view.View;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="seeStats" id="com.killerkounter/MainActivity#seeStats(Landroid.view.View;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DisplayStatisticsActivity" location="260,454" size="208,121" id="com.killerkounter/DisplayStatisticsActivity" runTimeClassModel="sTAT_LIST,onCreateOptionsMenu(Landroid.view.Menu;),nEW_COUNTER_LIST,onOptionsItemSelected(Landroid.view.MenuItem;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="155,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="nEW_COUNTER_LIST" id="com.killerkounter/DisplayStatisticsActivity#nEW_COUNTER_LIST"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="sTAT_LIST" id="com.killerkounter/DisplayStatisticsActivity#sTAT_LIST"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="146,36">
+      <children xsi:type="editmodel:MethodEditModel" name="onCreateOptionsMenu" id="com.killerkounter/DisplayStatisticsActivity#onCreateOptionsMenu(Landroid.view.Menu;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="onOptionsItemSelected" id="com.killerkounter/DisplayStatisticsActivity#onOptionsItemSelected(Landroid.view.MenuItem;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Counter" location="50,454" size="160,193" id="com.killerkounter/Counter" runTimeClassModel="Increment(),count,dates,name,Rename(Ljava.lang.String;),Counter(Ljava.lang.String;),Reset(),toString()">
+    <children xsi:type="editmodel:CompartmentEditModel" size="137,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="count" id="com.killerkounter/Counter#count"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="dates" id="com.killerkounter/Counter#dates"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="com.killerkounter/Counter#name"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="81,90">
+      <children xsi:type="editmodel:MethodEditModel" name="Counter" id="com.killerkounter/Counter#Counter(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Increment" id="com.killerkounter/Counter#Increment()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Rename" id="com.killerkounter/Counter#Rename(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Reset" id="com.killerkounter/Counter#Reset()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="com.killerkounter/Counter#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" interactive="false" level="-1" showScope="InPackage" properties="wireOptions=1;Product=eUML2"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

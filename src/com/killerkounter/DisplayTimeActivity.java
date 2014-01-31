@@ -59,4 +59,29 @@ public class DisplayTimeActivity extends ListActivity {
 		return super.onOptionsItemSelected(item);
 	}
 
+	/** 
+	 * @uml.property name="displayStatisticsActivity"
+	 * @uml.associationEnd inverse="displayTimeActivity:com.killerkounter.DisplayStatisticsActivity"
+	 */
+	private DisplayStatisticsActivity displayStatisticsActivity;
+
+	/** 
+	 * Getter of the property <tt>displayStatisticsActivity</tt>
+	 * @return  Returns the displayStatisticsActivity.
+	 * @uml.property  name="displayStatisticsActivity"
+	 */
+	public DisplayStatisticsActivity getDisplayStatisticsActivity() {
+		return displayStatisticsActivity;
+	}
+
+	/** 
+	 * Setter of the property <tt>displayStatisticsActivity</tt>
+	 * @param displayStatisticsActivity  The displayStatisticsActivity to set.
+	 * @uml.property  name="displayStatisticsActivity"
+	 */
+	public void setDisplayStatisticsActivity(
+			DisplayStatisticsActivity displayStatisticsActivity) {
+				this.displayStatisticsActivity = displayStatisticsActivity;
+			}
+
 }

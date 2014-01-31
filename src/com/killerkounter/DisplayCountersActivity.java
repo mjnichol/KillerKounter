@@ -17,12 +17,19 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 
+/**
+ * @author  mjnichol
+ */
 public class DisplayCountersActivity extends ListActivity {
 	
 	public final static String NEW_COUNTER_LIST = "com.killercounter.NEW_COUNTER_LIST";
 	
 	// array adapter to notice changes to the counter list
 	private ArrayAdapter<Counter> mAdapter;
+	/** 
+	 * @uml.property name="my_counters"
+	 * @uml.associationEnd 
+	 */
 	private CounterList my_counters;
 	
 	// button switches

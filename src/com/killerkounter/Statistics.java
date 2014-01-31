@@ -5,12 +5,19 @@ import java.util.Date;
 
 
 // This class will handle all of the statistics functionalities for the application
+/**
+ * @author  mjnichol
+ */
 public class Statistics {
 
 
 	// Take a counter only! The user will have to select a counter
 	// This will then take them to a new view
 
+	/**
+	 * @uml.property  name="counter"
+	 * @uml.associationEnd  
+	 */
 	private Counter counter;
 	// default constructor
 	public Statistics(Counter counter) {

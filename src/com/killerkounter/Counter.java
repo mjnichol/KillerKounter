@@ -3,10 +3,22 @@ package com.killerkounter;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * @author  mjnichol
+ */
 public class Counter {
 
+	/**
+	 * @uml.property  name="count"
+	 */
 	private Integer count;
+	/**
+	 * @uml.property  name="name"
+	 */
 	private String name;
+	/**
+	 * @uml.property  name="dates"
+	 */
 	private ArrayList<Date> dates;
 	
 	// add an exception to catch null names and repeated names
@@ -41,16 +53,28 @@ public class Counter {
 	}
 
 	// Below are the getters
+	/**
+	 * @return
+	 * @uml.property  name="count"
+	 */
 	public Integer getCount() {
 		return count;
 	}
 
 	// Get the counter name
+	/**
+	 * @return
+	 * @uml.property  name="name"
+	 */
 	public String getName() {
 		return name;
 	}
 
 	// Get the list of dates. Will be used for statistics
+	/**
+	 * @return
+	 * @uml.property  name="dates"
+	 */
 	public ArrayList<Date> getDates() {
 		return dates;
 	}

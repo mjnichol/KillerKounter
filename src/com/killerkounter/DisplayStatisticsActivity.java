@@ -15,13 +15,21 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import java.util.Collection;
 
+/**
+ * @author  mjnichol
+ */
 public class DisplayStatisticsActivity extends ListActivity {
 
 	public final static String NEW_COUNTER_LIST = "com.killercounter.NEW_COUNTER_LIST";
 	public final static String STAT_LIST = "com.killercounter.STAT_LIST";
 	
 	private ArrayAdapter<Counter> mAdapter;
+	/**
+	 * @uml.property  name="my_counters"
+	 * @uml.associationEnd  
+	 */
 	private CounterList my_counters;
 	
 	@SuppressLint("NewApi")
@@ -141,6 +149,32 @@ public class DisplayStatisticsActivity extends ListActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	/** 
+	 * @uml.property name="displayTimeActivity"
+	 * @uml.associationEnd multiplicity="(0 -1)" inverse="displayStatisticsActivity:com.killerkounter.DisplayTimeActivity"
+	 */
+	private Collection<DisplayTimeActivity> displayTimeActivity;
+
+	/** 
+	 * Getter of the property <tt>displayTimeActivity</tt>
+	 * @return  Returns the displayTimeActivity.
+	 * @uml.property  name="displayTimeActivity"
+	 */
+	public Collection<DisplayTimeActivity> getDisplayTimeActivity() {
+		return displayTimeActivity;
+	}
+
+
+	/** 
+	 * Setter of the property <tt>displayTimeActivity</tt>
+	 * @param displayTimeActivity  The displayTimeActivity to set.
+	 * @uml.property  name="displayTimeActivity"
+	 */
+	public void setDisplayTimeActivity(
+			Collection<DisplayTimeActivity> displayTimeActivity) {
+		this.displayTimeActivity = displayTimeActivity;
 	}
 
 }

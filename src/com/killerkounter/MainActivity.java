@@ -23,6 +23,9 @@ import com.google.gson.Gson;
  * This activity will make the main splash page that
  * will be used for navigating between the options we have available
  */
+/**
+ * @author  mjnichol
+ */
 public class MainActivity extends Activity {
 
 	// Save file
@@ -36,6 +39,10 @@ public class MainActivity extends Activity {
 
 	// list to hold the counters (add a load and save feature later
 	// see lonely twitter for help!
+	/**
+	 * @uml.property  name="counters"
+	 * @uml.associationEnd  
+	 */
 	public CounterList counters = new CounterList();
 
 	@Override

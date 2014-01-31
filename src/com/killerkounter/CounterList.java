@@ -2,9 +2,18 @@ package com.killerkounter;
 
 import java.util.ArrayList;
 
+/**
+ * @author  mjnichol
+ */
 public class CounterList {
 
+	/**
+	 * @uml.property  name="numCounters"
+	 */
 	private int numCounters;
+	/**
+	 * @uml.property  name="counterList"
+	 */
 	private ArrayList<Counter> counterList;
 	
 	// default constructor when no save file is present
@@ -28,11 +37,19 @@ public class CounterList {
 	}
 	
 	// get the number of counters
+	/**
+	 * @return
+	 * @uml.property  name="numCounters"
+	 */
 	public int getNumCounters() {
 		return numCounters;
 	}
 
 	// get the list of counters
+	/**
+	 * @return
+	 * @uml.property  name="counterList"
+	 */
 	public ArrayList<Counter> getCounterList() {
 		return counterList;
 	}

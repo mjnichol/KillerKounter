@@ -30,32 +30,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 /**
- * A {@link View.OnTouchListener} that makes any {@link View} dismissable when the
- * user swipes (drags her finger) horizontally across the view.
- *
- * <p><em>For {@link ListView} list items that don't manage their own touch events
- * (i.e. you're using
- * {@link ListView#setOnItemClickListener(AdapterView.OnItemClickListener)}
- * or an equivalent listener on {@link ListActivity} or
- * {@link ListFragment}, use {@link SwipeDismissListViewTouchListener} instead.</em></p>
- *
- * <p>Example usage:</p>
- *
- * <pre>
- * view.setOnTouchListener(new SwipeDismissTouchListener(
- *         view,
- *         null, // Optional token/cookie object
- *         new SwipeDismissTouchListener.OnDismissCallback() {
- *             public void onDismiss(View view, Object token) {
- *                 parent.removeView(view);
- *             }
- *         }));
- * </pre>
- *
- * <p>This class Requires API level 12 or later due to use of {@link
- * android.view.ViewPropertyAnimator}.</p>
- *
- * @see SwipeDismissListViewTouchListener
+ * A  {@link View.OnTouchListener}  that makes any  {@link View}  dismissable when the user swipes (drags her finger) horizontally across the view. <p><em>For  {@link ListView}  list items that don't manage their own touch events (i.e. you're using {@link ListView#setOnItemClickListener(AdapterView.OnItemClickListener)} or an equivalent listener on  {@link ListActivity}  or {@link ListFragment} , use  {@link SwipeDismissListViewTouchListener}  instead.</em></p> <p>Example usage:</p> <pre> view.setOnTouchListener(new SwipeDismissTouchListener( view, null, // Optional token/cookie object new SwipeDismissTouchListener.OnDismissCallback() { public void onDismiss(View view, Object token) { parent.removeView(view); } })); </pre> <p>This class Requires API level 12 or later due to use of  {@link android.view.ViewPropertyAnimator} .</p>
+ * @see  SwipeDismissListViewTouchListener
  */
 public class SwipeDismissTouchListener implements View.OnTouchListener {
     // Cached ViewConfiguration and system-wide constant values
@@ -66,6 +42,10 @@ public class SwipeDismissTouchListener implements View.OnTouchListener {
 
     // Fixed properties
     private View mView;
+    /**
+	 * @uml.property  name="mCallbacks"
+	 * @uml.associationEnd  
+	 */
     private DismissCallbacks mCallbacks;
     private int mViewWidth = 1; // 1 and not 0 to prevent dividing by zero
 
