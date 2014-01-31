@@ -67,16 +67,6 @@ public class DisplayCountersActivity extends ListActivity {
     	setResult(RESULT_OK, returnIntent);
     	// do I add finish() now?
     	finish();
-		/*new AlertDialog.Builder(this)
-	        .setTitle("Really Exit?")
-	        .setMessage("Are you sure you want to exit?")
-	        .setNegativeButton(android.R.string.no, null)
-	        .setPositiveButton(android.R.string.yes, new OnClickListener() {
-
-	            public void onClick(DialogInterface arg0, int arg1) {
-	                WelcomeActivity.super.onBackPressed();
-	            }
-	        }).create().show();*/
 	}
 	
 	// intercept the key down button signal to save counter state
@@ -207,21 +197,17 @@ public class DisplayCountersActivity extends ListActivity {
     @Override
     protected void onListItemClick(ListView listView, View view, int position, long id) {
         
-    	//Counter instance = (Counter) getListAdapter().getItem(position);
-    	//instance.Increment();
-    	//mAdapter.notifyDataSetChanged();
     	
     	if(reset){
     		my_counters.getCounterList().get(position).Reset();
+    		reset = !reset;
     	}
     	
     	else if(rename){
     		EditText editText = (EditText) findViewById(R.id.edit_name);
     		String name = editText.getText().toString();
     		my_counters.getCounterList().get(position).Rename(name);
-    		Toast.makeText(this,
-    				name,
-    				Toast.LENGTH_SHORT).show();
+    		rename = !rename;
     	}
     	
     	else{
