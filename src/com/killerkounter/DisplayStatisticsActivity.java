@@ -8,13 +8,18 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
 public class DisplayStatisticsActivity extends ListActivity {
 
+	public final static String NEW_COUNTER_LIST = "com.killercounter.NEW_COUNTER_LIST";
+	
 	private ArrayAdapter<Counter> mAdapter;
 	private CounterList my_counters;
 	
@@ -82,6 +87,23 @@ public class DisplayStatisticsActivity extends ListActivity {
             getActionBar().setDisplayHomeAsUpEnabled(true);
         }
 	}
+	
+	
+    @Override
+    protected void onListItemClick(ListView listView, View view, int position, long id) {
+        
+    	//Counter instance = (Counter) getListAdapter().getItem(position);
+    	//instance.Increment();
+    	//mAdapter.notifyDataSetChanged();
+    	
+        Toast.makeText(this,
+                "Clicked " + getListAdapter().getItem(position).toString(),
+                Toast.LENGTH_SHORT).show();
+
+
+    }
+	
+	
 	/**
 	 * Set up the {@link android.app.ActionBar}.
 	 */
