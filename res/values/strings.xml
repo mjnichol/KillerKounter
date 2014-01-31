@@ -16,6 +16,6 @@
     <string name="create_counter">Create the Counter!</string>
     
     
-    <string name="heading_dismissable_list_view">ListView</string>
+    <string name="heading_dismissable_list_view">Counters</string>
 
 </resources>

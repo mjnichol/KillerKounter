@@ -16,6 +16,9 @@ import com.google.gson.Gson;
 */
 public class MainActivity extends Activity {
 	
+	// Save file
+	private static final String FILENAME = "file.sav";
+	
 	// key for passing counter list
 	public final static String COUNTER_LIST = "com.killercounter.COUNTER_LIST";
 	
@@ -38,6 +41,16 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
+	// load the saved state of the counters
+	private void loadFromFile(){
+		
+	}
+	
+	// save all the counters to the file (need to clear the save file and rewrite to it)
+	private void saveToFile(){
+		
+	}
+	
 	
 	/* Called when the user wants to go to the counter page */
 	public void seeCounters(View view){ // might want to pass the counter list into this?
@@ -54,7 +67,6 @@ public class MainActivity extends Activity {
 		startActivity(intent);
 	}
 	
-	
 	public void seeStats(View view){
 		// perform the logic to transfer to the counter activity
 		// make a toast to check that this button press works
@@ -65,12 +77,9 @@ public class MainActivity extends Activity {
 	
 	/* Called when the user clicks the send button */
 	public void createCounter(View view){
-		Toast.makeText(this,
-                "Clicked create counter",
-                Toast.LENGTH_SHORT).show();
 		EditText editText = (EditText) findViewById(R.id.edit_message);
-		//String name = editText.getText().toString();
-		//counters.addCounter(new Counter(name));
+		String name = editText.getText().toString();
+		counters.addCounter(new Counter(name));
 	}
 }
 	
