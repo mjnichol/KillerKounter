@@ -6,12 +6,12 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
@@ -27,6 +27,9 @@ public class MainActivity extends Activity {
 
 	// Save file
 	private static final String FILENAME = "file.sav";
+
+	// Result Code
+	private static final int RESULT_CODE = 1;
 
 	// key for passing counter list
 	public final static String COUNTER_LIST = "com.killercounter.COUNTER_LIST";
@@ -107,7 +110,8 @@ public class MainActivity extends Activity {
 		intent.putExtra(COUNTER_LIST, JSON_CounterList);
 
 		// start the desired activity
-		startActivity(intent);
+		//startActivity(intent);
+		startActivityForResult(intent, RESULT_CODE);
 	}
 
 	public void seeStats(View view){
@@ -124,6 +128,25 @@ public class MainActivity extends Activity {
 		String name = editText.getText().toString();
 		counters.addCounter(new Counter(name));
 		this.saveToFile();
+	}
+
+	// okay, this should get the counter object back.
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+		if (requestCode == RESULT_CODE) {
+
+			// the data is a JSON string that needs to be unpacked
+			if(resultCode == RESULT_OK){      
+				Gson gson = new Gson();
+				String result=data.getStringExtra("countUpdate");
+				counters = gson.fromJson(result, CounterList.class);
+				this.saveToFile();
+				
+			}
+			if (resultCode == RESULT_CANCELED) {    
+				//Write your code if there's no result
+			}
+		}
 	}
 }
 

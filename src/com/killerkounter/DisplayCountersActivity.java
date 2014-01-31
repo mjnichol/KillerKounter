@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,6 +23,59 @@ public class DisplayCountersActivity extends ListActivity {
 	// array adapter to notice changes to the counter list
 	private ArrayAdapter<Counter> mAdapter;
 	private CounterList my_counters;
+	
+	Intent returnIntent = new Intent();
+		
+	// intercept the back button signal and store counter state
+	@Override
+	public void onBackPressed() {
+		Toast.makeText(this,
+				"pressed back",
+				Toast.LENGTH_SHORT).show();
+		
+		//save the counters
+    	// make the new JSON for the counters
+    	Gson gson = new Gson();
+		// extract the JSON
+		String jsonCounters = gson.toJson(my_counters);
+    	
+    	// Now send back the data to the parent activity?
+    	
+    	returnIntent.putExtra("countUpdate", jsonCounters);
+    	setResult(RESULT_OK, returnIntent);
+    	// do I add finish() now?
+    	finish();
+		/*new AlertDialog.Builder(this)
+	        .setTitle("Really Exit?")
+	        .setMessage("Are you sure you want to exit?")
+	        .setNegativeButton(android.R.string.no, null)
+	        .setPositiveButton(android.R.string.yes, new OnClickListener() {
+
+	            public void onClick(DialogInterface arg0, int arg1) {
+	                WelcomeActivity.super.onBackPressed();
+	            }
+	        }).create().show();*/
+	}
+	
+	// intercept the key down button signal to save counter state
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+	    if (keyCode == KeyEvent.KEYCODE_BACK ) {
+	        //save the counters
+	    	// make the new JSON for the counters
+	    	Gson gson = new Gson();
+			// extract the JSON
+			String jsonCounters = gson.toJson(my_counters);
+	    	
+	    	// Now send back the data to the parent activity?
+	    	
+	    	returnIntent.putExtra("countUpdate", jsonCounters);
+	    	setResult(RESULT_OK, returnIntent);
+	    	// do I add finish() now?
+	    	finish();
+	    }
+	    return super.onKeyDown(keyCode, event);
+	}
 	
 	@SuppressLint("NewApi")
 	@Override
@@ -43,20 +97,6 @@ public class DisplayCountersActivity extends ListActivity {
 		
 		// Show the Up button in the action bar.
 		setupActionBar();
-		
-		/*
-		for (int i = 0 ; i < 20 ; i++){
-			counters.addCounter(new Counter("counter " + i));
-		}
-		*/
-		
-        // Set up ListView example
-		/*
-        String[] items = new String[20];
-        for (int i = 0; i < items.length; i++) {
-            items[i] = "Item " + (i + 1)%5;
-        }
-		*/
 		
         mAdapter = new ArrayAdapter<Counter>(this,
                 android.R.layout.simple_list_item_1,
@@ -96,7 +136,7 @@ public class DisplayCountersActivity extends ListActivity {
         // Make sure we're running on Honeycomb or higher to use ActionBar APIs
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             // Show the Up button in the action bar.
-            getActionBar().setDisplayHomeAsUpEnabled(true);
+            getActionBar().setDisplayHomeAsUpEnabled(true); //was tru, but force user to use back to navigate
         }
 	}
 
@@ -127,7 +167,16 @@ public class DisplayCountersActivity extends ListActivity {
 			//
 			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
 			//
-			NavUtils.navigateUpFromSameTask(this);
+			//NavUtils.navigateUpFromSameTask(this);
+			
+			//save the counters
+	    	// make the new JSON for the counters
+	    	Gson gson = new Gson();
+			// extract the JSON
+			String jsonCounters = gson.toJson(my_counters);
+	    	returnIntent.putExtra("countUpdate", jsonCounters);
+	    	setResult(RESULT_OK, returnIntent);
+	    	finish();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
@@ -141,11 +190,14 @@ public class DisplayCountersActivity extends ListActivity {
     	//mAdapter.notifyDataSetChanged();
     	
     	my_counters.getCounterList().get(position).Increment();
+    	/*
     	Toast.makeText(this,
                 "Clicked " + getListAdapter().getItem(position).toString(),
                 Toast.LENGTH_SHORT).show();
+                */
     	mAdapter.notifyDataSetChanged();
     	onContentChanged(); // this causes the place in the list to go to the top
+ 
     }
     
     // override the on destroy method to save the state of the counter objects and pass
