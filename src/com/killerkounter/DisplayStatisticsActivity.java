@@ -19,6 +19,7 @@ import com.google.gson.Gson;
 public class DisplayStatisticsActivity extends ListActivity {
 
 	public final static String NEW_COUNTER_LIST = "com.killercounter.NEW_COUNTER_LIST";
+	public final static String STAT_LIST = "com.killercounter.STAT_LIST";
 	
 	private ArrayAdapter<Counter> mAdapter;
 	private CounterList my_counters;
@@ -47,7 +48,7 @@ public class DisplayStatisticsActivity extends ListActivity {
         mAdapter = new ArrayAdapter<Counter>(this,
                 android.R.layout.simple_list_item_1,
                 android.R.id.text1,
-                counters.getCounterList());
+                counters.getCounterList()); 
                 //new ArrayList<Counter>(Arrays.asList(items))); // pass the counter list here, overload the toString method so that things are displayed correctly
         setListAdapter(mAdapter);
 
@@ -92,14 +93,19 @@ public class DisplayStatisticsActivity extends ListActivity {
     @Override
     protected void onListItemClick(ListView listView, View view, int position, long id) {
         
-    	//Counter instance = (Counter) getListAdapter().getItem(position);
-    	//instance.Increment();
-    	//mAdapter.notifyDataSetChanged();
+    	Counter instance = (Counter) getListAdapter().getItem(position);
+    	Statistics stats = new Statistics(instance);
     	
-        Toast.makeText(this,
-                "Clicked " + getListAdapter().getItem(position).toString(),
-                Toast.LENGTH_SHORT).show();
+    	// create a new activity that is passed a JSONified statistic determined by the counter
+		// transfer to the counter activity
+		Intent intent = new Intent(this, DisplayTimeActivity.class);
 
+		// String to hold the JSON string
+		String JSON_StatList = new Gson().toJson(stats);
+
+		// send the JSON string
+		intent.putExtra(STAT_LIST, JSON_StatList);
+		startActivity(intent);
 
     }
 	

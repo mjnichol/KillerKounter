@@ -18,5 +18,6 @@
     <string name="heading_dismissable_list_view">Counters</string>
     <string name="title_activity_display_statistics">DisplayStatisticsActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_display_time">DisplayTimeActivity</string>
 
 </resources>
